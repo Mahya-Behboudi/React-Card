@@ -16,7 +16,7 @@ $p-15 :15px;
 
 .card-container {
     padding: 20px;
-    width: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -27,7 +27,7 @@ $p-15 :15px;
         @extend .card-icons;
         @extend .cardA-arrow;
         position: relative;
-        width: 26.3%;
+        width: 57%;
         overflow: hidden;
 
 

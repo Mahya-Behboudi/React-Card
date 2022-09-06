@@ -2,12 +2,14 @@ import React from 'react';
 import './App.scss';
 // components
 import CardA from './Components/CardA';
+import CardB from './Components/CardB/CardB';
 
 function App() {
   return (
-    <React.Fragment>
+    <div className='container'>
+      <CardB></CardB>
       <CardA/>
-    </React.Fragment>
+    </div>
   )
 }
 
