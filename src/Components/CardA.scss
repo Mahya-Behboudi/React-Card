@@ -1,0 +1,236 @@
+// fonts 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+// variables 
+$white :#fff;
+$p-10 :10px;
+$p-5:5px;
+$p-15 :15px;
+
+.card-container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .card-page {
+        @extend .card-icons;
+        @extend .cardA-arrow;
+        position: relative;
+        width: 26.3%;
+        overflow: hidden;
+
+
+
+
+        .card-title {
+            @extend .card-icons;
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            box-sizing: border-box;
+            padding: $p-10 $p-15;
+
+            & {
+                color: $white;
+            }
+
+            span {
+                font-size: 14px;
+            }
+
+            .card-icons {
+                position: relative;
+               
+
+                &::before {
+                    opacity: 0;
+                    content: ' 18';
+                    position: absolute;
+                    top: -8px;
+                    left: 58px;
+                    font-size: 12px;
+                }
+
+                &::after {
+                    opacity: 0;
+                    content: '3';
+                    position: absolute;
+                    top: -8px;
+                    left: 109px;
+                    font-size: 12px;
+                }
+
+
+
+                .icon {
+                    padding: $p-10 $p-15;
+
+                }
+
+            }
+
+        }
+
+        .cardA-image {
+            width: 400px;
+            height: 550px;
+            background-image: url('https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg');
+            background-size: cover;
+            background-position: center center;
+            -webkit-box-shadow: 2px 5px 17px -4px #000000;
+            box-shadow: 2px 5px 17px -4px #000000;
+        }
+
+        .cardA-content {
+            font-family: 'Open Sans', 'sans-serif';
+            position: absolute;
+            bottom: 10px;
+
+            box-sizing: border-box;
+            padding: $p-15;
+            @extend .arrow;
+            @extend .card;
+            // @extend .cardA-arrow;
+
+            & {
+                color: $white;
+
+            }
+
+            .content {
+                // height: fit-content;
+                padding-bottom: 40px;
+            }
+
+            .content p,
+            h2 {
+                line-height: 48px;
+                font-family: 'Open Sans';
+
+            }
+
+            .arrow {
+                .card {
+                    // background-color: red;
+                    margin-bottom: 20px;
+                    padding: $p-15;
+                    color: $white;
+                    font-size: 14px;
+
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+
+                }
+
+                height: 150px;
+                position: relative;
+
+                .cardA-arrow {
+                    margin-top: 40px;
+                    width: 30px;
+                    color: $white;
+                    height: 20px;
+                    position: absolute;
+                    left: 230px;
+                    top: 40.5px;
+                    opacity: 0;
+                    transform: translateX(20px);
+                    -webkit-transform: translateX(20px);
+                    -moz-transform: translateX(20px);
+                    -ms-transform: translateX(20px);
+                    -o-transform: translateX(20px);
+                    transition: all .7s ease;
+                    -webkit-transition: all .7s ease;
+                    -moz-transition: all .7s ease;
+                    -ms-transition: all .7s ease;
+                    -o-transition: all .7s ease;
+                }
+
+
+
+
+
+            }
+
+
+
+        }
+    }
+}
+
+.arrow {
+    //text-align: center;
+    //overflow:;
+    //opacity: 0;
+    transform: translateY(120px);
+    -webkit-transform: translateY(120px);
+    -moz-transform: translateY(120px);
+    -ms-transform: translateY(120px);
+    -o-transform: translateY(120px);
+    transition: all .5s ease;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    -o-transition: all .5s ease;
+}
+
+// hover effect 
+
+.card-page:hover {
+    z-index: 1111;
+
+    .arrow {
+        transform: translateY(-1px);
+        -webkit-transform: translateY(-1px);
+        -moz-transform: translateY(-1px);
+        -ms-transform: translateY(-1px);
+        -o-transform: translateY(-1px);
+    }
+
+    .card-icons {
+        &::before {
+            content: ' 18';
+            position: absolute;
+            top: 2px;
+            right: 78px;
+            font-size: 12px;
+
+        }
+
+        &::after {
+            content: '3';
+            position: absolute;
+            top: 2px;
+            right: 34px;
+            font-size: 12px;
+        }
+    }
+
+}
+
+.card:hover {
+    .cardA-arrow {
+        opacity: 1;
+        // background-color: red;
+        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+        -moz-transform: translateX(-10px);
+        -ms-transform: translateX(-10px);
+        -o-transform: translateX(-10px);
+    }
+}
