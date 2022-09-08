@@ -1,0 +1,29 @@
+.container {
+
+    // bottom: auto;
+    .active {
+        display: none !important;
+        position: absolute;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        align-items: center;
+
+        background-color: lightblue;
+        left: 0;
+        top: -50px;
+        width: 400px;
+
+    }
+
+    .icon {
+        position: absolute;
+        top: 8px;
+        left: 350px;
+        display: flex;
+        font-size: 25px;
+        color: grey;
+        cursor: pointer;
+    }
+
+}

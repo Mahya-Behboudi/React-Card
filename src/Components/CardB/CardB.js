@@ -1,7 +1,7 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEllipsis } from '@fortawesome/free-solid-svg-icons';
+
 import './CardB.scss';
+import Accardeon from '../Acaardeon';
 
 const CardB = () => {
     return (
@@ -16,7 +16,7 @@ const CardB = () => {
                 <div className='CardB-content'>
                     <div className='CardB-content-title'>
                         <p>Jane Doe</p>
-                        <FontAwesomeIcon icon={faEllipsis} className='icon' />
+                        <Accardeon/>
                     </div>
                     <h2>
                     Boxing icon has the will for a couple more fights
