@@ -1,18 +1,29 @@
 .container {
 
     // bottom: auto;
-    .active {
+    .dsplayN {
         display: none !important;
+    }
+    .active {
         position: absolute;
         display: flex;
         justify-content: space-evenly;
         padding: 20px;
         align-items: center;
-
         background-color: lightblue;
         left: 0;
         top: -50px;
         width: 400px;
+        transition:all .3s ease-in ;
+       
+        -webkit-transition:all .3s ease-in ;
+        -moz-transition:all .3s ease-in ;
+        -ms-transition:all .3s ease-in ;
+        -o-transition:all .3s ease-in ;
+        .active-icons{
+            color: transparent;
+            font-size: 20px;
+        }
 
     }
 
